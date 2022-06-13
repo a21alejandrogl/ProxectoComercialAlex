@@ -72,6 +72,11 @@ public class TarxetaFidelizacion {
         return resultado;
     }
 
+    /**
+     *
+     * @param numPuntosRegalo
+     * @return
+     */
     public boolean faltanPuntosRegalo(int numPuntosRegalo) {
         if(numPuntosRegalo > puntos){
             return false;
