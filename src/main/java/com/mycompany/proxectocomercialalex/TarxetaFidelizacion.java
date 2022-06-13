@@ -75,7 +75,7 @@ public class TarxetaFidelizacion {
     public boolean faltanPuntosRegalo(int numPuntosRegalo) {
         if(numPuntosRegalo > puntos){
             return false;
-        }else {
+        } else {
             return true;
         }
     }
