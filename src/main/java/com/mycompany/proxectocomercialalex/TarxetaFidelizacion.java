@@ -17,7 +17,7 @@ public class TarxetaFidelizacion {
      */
     public TarxetaFidelizacion() {
     }
-
+    
     /**
      *
      * @param puntosIniciais
@@ -32,7 +32,7 @@ public class TarxetaFidelizacion {
      * @return
      */
     public boolean obterPuntos(int valorCompra){
-        int numPuntos = valorCompra/20;
+        int numPuntos = valorCompra/EUROS_PUNTO;
         if (numPuntos > 0) {
             this.puntos+=numPuntos;
             return true;
@@ -40,6 +40,7 @@ public class TarxetaFidelizacion {
             return false;
         }
     }
+    private static final int EUROS_PUNTO = 20;
     
     /**
      *
@@ -60,7 +61,7 @@ public class TarxetaFidelizacion {
      */
     public int obterRegalo(int numPuntosRegalo){
         int resultado = 0;
-        if (this.puntos < numPuntosRegalo){
+        if (faltanPuntosRegalo(numPuntosRegalo)){
             resultado = -1; 
         } else if (this.puntos == numPuntosRegalo){
             this.puntos = resultado;
@@ -69,6 +70,14 @@ public class TarxetaFidelizacion {
             resultado = 1;
         }
         return resultado;
+    }
+
+    public boolean faltanPuntosRegalo(int numPuntosRegalo) {
+        if(numPuntosRegalo > puntos){
+            return false;
+        }else {
+            return true;
+        }
     }
 
     @Override

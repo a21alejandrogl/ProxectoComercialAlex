@@ -140,5 +140,33 @@ public class TarxetaFidelizacionTest {
         System.out.println("ten puntos para obter un regalo");
         // TODO review the generated test code and remove the default call to fail.
     }
+    
+    @Test 
+    public void testFaltanPuntos() {
+        System.out.println("Validar se ten puntos para obter o regalo elixido polo cliente");
+        int puntos = 5;
+        int puntosRegalo = 10;
+        TarxetaFidelizacion instance = new TarxetaFidelizacion();
+        boolean expResult = false;
+        boolean result = instance.obterPuntos(puntos);
+        assertEquals(expResult, result);
+        System.out.println("non ten puntos para obter o regalo elixido");
+        // TODO review the generated test code and remove the default call to fail.
+    }
 
+    /**
+     *
+     */
+    @Test
+    public void testFaltanPuntos2() {
+        System.out.println("Validar se ten puntos para obter o regalo elixido polo cliente");
+        int puntos = 5;
+        int puntosRegalo = 5;
+        TarxetaFidelizacion instance = new TarxetaFidelizacion();
+        boolean expResult = true;
+        boolean result = instance.obterPuntos(puntos);
+        assertEquals(expResult, result);
+        System.out.println("ten puntos para obter o regalo elixido");
+        // TODO review the generated test code and remove the default call to fail.
+    }
 }
