@@ -6,7 +6,7 @@ package com.mycompany.proxectocomercialalex;
 
 /**
  *
- * @author dammdcd-a
+ * @author a21alejandrogl
  */
 public class TarxetaFidelizacion {
     
